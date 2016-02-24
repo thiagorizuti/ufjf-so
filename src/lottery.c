@@ -101,7 +101,7 @@ int lottTransferTickets(Process *src, Process *dst, int tickets) {
 
 	if(srcParams->num_tickets > 0){
 		if(srcParams->num_tickets - tickets < 0){
-			tickets += srcParams->num_tickets - tickets - 1;
+			tickets = srcParams->num_tickets - 1;
 		}
 			srcParams->num_tickets -= tickets;
 			dstParams->num_tickets += tickets;
